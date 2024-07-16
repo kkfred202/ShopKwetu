@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopKwetu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/shopkwetulogo.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a class="a" href="index.html">Home</a></li>
+                        <li><a class="a" href="products.html">Products</a></li>
+                        <li><a class="a" href="about.html">About</a></li>
+                        <li><a class="a" href="contact.html">Contact</a></li>
+                        <li><a class="a" href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                <img src="images/menu.png" onclick="menutoggle()" class="menu-icon">
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <h1 style="text-align: center; margin-bottom: 20px;">Contact Us</h1>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-form">
+            <h2 style="text-align: center;">Get in Touch</h2>
+            <form onsubmit="sendEmail()">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error-txt hidden" id="name-error">Full Name can't be blank</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required>
+                    <div class="error-txt hidden" id="email-error">Email Address can't be blank</div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone: </label>
+                    <input type="tel" name="phone" id="phone" required>
+                    <div class="error-txt hidden" id="phone-error">Phone Number can't be blank</div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" required></textarea>
+                    <div class="error-txt hidden" id="message-error">Message can't be blank</div>
+                </div>
+                <button type="button" id="submit-btn" onclick="validateform()">Submit</button>
+            </form>
+        </section>
+
+        <section class="contact-info">
+            <h2 style="text-align: center;">Contact Info</h2>
+            <p>
+                Have any questions about our work? We are committed to ensuring you're receiving the best shopping experience. From basic questions to complex compliance inquiries, we're here to help!
+            </p>
+            <h3 class="imejes" style="margin-bottom: 20px;">Give us a shout!</h3>
+            <p>Thanks for choosing us! We're thrilled to have you on board. Want to share the love? Spread the word to your friends.</p>
+            <ul class="social-icons">
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </section>
+    </main>
+
+    <section class="map-container" style="margin-top: 20px;">
+        <div class="map-header">
+            <div class="map-item">
+                <h1>Find us <i class="fa-solid fa-location-dot"></i></h1>
+            </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4621.813117050377!2d36.82142930230959!3d-1.28719669779739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d78d4e3fbf%3A0xaf3101cd45f5a262!2sMaasai%20Market!5e0!3m2!1sen!2sie!4v1721130660099!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and iOS mobile phone.</p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png" alt="Play Store">
+                            <img src="images/app-store.png" alt="App Store">
+                        </div>
+                    </div>
+                    <div class="footer-col2">
+                        <img src="images/shopkwet.png" alt="ShopKwetu Logo">
+                        <p>Embrace Kenya: Sustainably Connecting You to the Heart of African Craftsmanship.</p>
+                    </div>
+                    <div class="footer-col3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2024 - ShopKwetu</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function menutoggle() {
+            var MenuItems = document.getElementById("MenuItems");
+            if (MenuItems.style.maxHeight === "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+        function sendEmail(event) {
+            event.preventDefault();
+            var hasError = false;
+            var inputs = document.querySelectorAll(".item");
+            inputs.forEach(function(input) {
+                var errorText = input.nextElementSibling;
+                if (input.value.trim() === "") {
+                    errorText.style.display = "block";
+                    hasError = true;
+                } else {
+                    errorText.style.display = "none";
+                }
+            });
+
+            if (!hasError) {
+                Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Username : "shopkwetuke@gmail.com",
+                    Password : "63E5ED89DD83B657B1F699968F4EBB7CC6CA",
+                    To : 'shopkwetuke@gmail.com',
+                    From : "shopkwetu@gmail.com",
+                    Subject : "New Contact Form Enquiry",
+                    Body : "Name: " + document.getElementById("name").value + 
+                           "<br>Email: " + document.getElementById("email").value + 
+                           "<br>Phone: " + document.getElementById("phone").value + 
+                           "<br>Message: " + document.getElementById("message").value
+                }).then(
+                  message => alert(message)
+                );
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

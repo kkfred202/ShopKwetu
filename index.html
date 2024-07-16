@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   <div class="header">
+       <div class="container">
+          <div class="navbar">
+              <div class="logo">
+                  <a href="index.html"><img src="images/shopkwetulogo.png" width="125px"></a>
+              </div>
+              <nav>
+               <ul id="MenuItems">
+                   <li><a class="a" href="index.html">Home</a></li>
+                   <li><a  href="products.html">Products</a></li>
+                   <li><a href="">About</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+                   <li><a href="account.html">Account</a></li>
+               </ul>
+              </nav>
+              <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+              <img src="images/menu.png" onclick="menutoggle()" class="menu-icon">
+          </div>
+           <div class="row">
+                <div class="col-2">
+                    <h1>Tour ShopKwetu<br> In Style!</h1>
+                    <p>Discover Kenyan Treasures - Embrace Art, Culture, and Craftsmanship at ShopKwetu!</p>
+                    <a href="#" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/woman.png">
+                </div>
+           </div>
+       </div>
+    </div>
+    <!------------------ featured categories --------------->
+     <div class="categories">
+         <div class="small-container">
+           <div class="row">
+               <div class="col-3">
+                   <img src="images/Warriors.png">
+               </div>
+               <div class="col-3">
+                   <img src="images/Lion.png">
+               </div>
+               <div class="col-3">
+                   <img src="images/Modern.png">
+               </div>
+           </div>
+         </div>
+     </div>
+     <!------------------ featured products --------------->
+     <div class="small-container">
+         <h2 class="title">Featured Products</h2>
+         <div class="row">
+             <div class="col-4">
+                 <img src="images/rugby.png" alt="Kenyan Rugby Jersey">
+                 <h4>Kenyan Rugby Jersey</h4>
+                 <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-o"></i>
+                 </div>
+                 <p>€50.00</p>
+             </div>
+             <div class="col-4">
+                 <img src="images/brace1.png" alt="Maasai Bracelets">
+                 <h4>Maasai Bracelets</h4>
+                 <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-half-o"></i>
+                 </div>
+                 <p>€75.00</p>
+             </div>
+             <div class="col-4">
+                 <img src="images/bracemax.png" alt="Wholesale Kenyan bracelets">
+                 <h4>Wholesale Kenyan bracelets</h4>
+                 <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-half-o"></i>
+                 </div>
+                 <p>$95.00</p>
+             </div>
+             <div class="col-4">
+                 <img src="images/shield.png" alt="Maasai Warrior set">
+                 <h4>Maasai Warrior set <br><small>(Maasai Shield and Rungu)</small></h4>
+                 <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-o"></i>
+                 </div>
+                 <p>$55.00</p>
+             </div>
+         </div>
+     </div>
+    <!----------offer-------------->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2"><img src="images/Kipchoge.png" class="offer-img"></div>
+                <div class="col-2">
+                    <p>Exclusively Available on ShopKwetu</p>
+                    <h1>Nike ZoomX Alphafly NEXT%</h1>
+                    <small> Designed for elite performance. Featuring ZoomX foam for exceptional energy return and a carbon fiber plate for responsiveness, they offer a breathable fit. Endorsed by KENYAN marathon legend Eliud Kipchoge, these shoes embody the spirit of "No Human is Limited."
+
+                    </small>
+                </br>
+                    <a href="" class="btn">Buy Now &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------testimonial------------->
+    <div class="testimonial">
+        <h2 style="text-align: center;margin-bottom: 20px;">Testimonials</h2>
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Fast delivery,I loved the bracelets ,will shop again The Maasai Rungu looks better than how I anticipated.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <img src="images/user-1.png">
+                    <h3>Freddie</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>I got an extra kenyan flag bracelet in addition to my custom made one So cool !! Also my girl loved the swahili dera and ankara dresses.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <img src="images/majido11.png">
+                    <h3>@Ibrahim254</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>I love their attention to detail and how the are able to advise on selections they have a lot of home decor will refer to my friends</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <img src="images/user-3.png">
+                    <h3>Mabel Joe</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------brands-------------->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="images/western-removebg-preview.png" style="width: 250px;margin-right: 10px;padding-right: 20px;">
+                </div>
+                <div class="col-5">
+                    <img src="images/saf.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/masterrr-removebg-preview.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/paypal.png " >
+                </div>
+                <div class="col-5">
+                    <img src="images/visapng.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------Footer--------------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and iOS mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col2">
+                    <img src="images/shopkwet.png">
+                    <p>Embrace Kenya: Sustainably Connecting You to the Heart of African Craftsmanship.</p>
+                </div>
+                <div class="footer-col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - ShopKwetu</p>
+        </div>
+    </div>
+    <!-------------js for toggle menu-------------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+</html>
