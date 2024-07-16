@@ -138,38 +138,6 @@
                 MenuItems.style.maxHeight = "0px";
             }
         }
-
-        function sendEmail(event) {
-            event.preventDefault();
-            var hasError = false;
-            var inputs = document.querySelectorAll(".item");
-            inputs.forEach(function(input) {
-                var errorText = input.nextElementSibling;
-                if (input.value.trim() === "") {
-                    errorText.style.display = "block";
-                    hasError = true;
-                } else {
-                    errorText.style.display = "none";
-                }
-            });
-
-            if (!hasError) {
-                Email.send({
-                    Host : "smtp.elasticemail.com",
-                    Username : "shopkwetuke@gmail.com",
-                    Password : "63E5ED89DD83B657B1F699968F4EBB7CC6CA",
-                    To : 'shopkwetuke@gmail.com',
-                    From : "shopkwetu@gmail.com",
-                    Subject : "New Contact Form Enquiry",
-                    Body : "Name: " + document.getElementById("name").value + 
-                           "<br>Email: " + document.getElementById("email").value + 
-                           "<br>Phone: " + document.getElementById("phone").value + 
-                           "<br>Message: " + document.getElementById("message").value
-                }).then(
-                  message => alert(message)
-                );
-            }
-        }
     </script>
     <script src="script.js"></script>
 </body>

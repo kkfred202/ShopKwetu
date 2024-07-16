@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     function validateform(event) {
-        event.preventDefault();  // Prevent form submission
+        event.preventDefault(); 
 
         const name = document.getElementById("name");
         const email = document.getElementById("email");
@@ -50,23 +50,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function sendEmail() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+
         Email.send({
             Host: "smtp.elasticemail.com",
-            Username: "shopkwetuke@gmail.com",
-            Password: "63E5ED89DD83B657B1F699968F4EBB7CC6CA",
+            Username: "shopkwetuke@gmail.com", 
+            Password: "8EF858AFB661F681F5788864CF1882E98FA9",
             To: 'shopkwetuke@gmail.com',
-            From: "shopkwetu@gmail.com",
+            From: "shopkwetuke@gmail.com",
             Subject: "New Contact Form Enquiry",
-            Body: "Name: " + document.getElementById("name").value + 
-                  "<br>Email: " + document.getElementById("email").value + 
-                  "<br>Phone: " + document.getElementById("phone").value + 
-                  "<br>Message: " + document.getElementById("message").value
+            Body: `Name: ${name} <br>Email: ${email} <br>Phone: ${phone} <br>Message: ${message}`
         }).then(
-            message => alert(message)
+            message => alert("Email sent successfully: ")
+        ).catch(
+            error => alert("Failed to send email: " + error)
         );
     }
 
-    
     const form = document.querySelector("form");
     form.addEventListener("submit", validateform);
 });
