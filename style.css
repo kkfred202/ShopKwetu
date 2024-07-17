@@ -117,7 +117,7 @@ nav ul li{
 .col-3 img{
     width: 100%;
 }
-/*-------featured product--------------*/
+/*-------featured products--------------*/
 
 .title{
     text-align: center;
@@ -165,9 +165,9 @@ h4{
 }
 
 
-/*-----------offer-------------*/
+/*-----------offer kipchoge-------------*/
 .offer{
-    background: radial-gradient(#fff, #D67073);
+    background: radial-gradient(#fff,rgba(0,102,0) );
     margin-top: 80px;
     padding: 30px 0;
 }
@@ -178,7 +178,7 @@ small{
     color: #555;
 }
 
-/*--------------------testimonial---------------*/
+/*--------------------testimonials---------------*/
 
 .testimonial{
     padding-top: 100px;
@@ -690,10 +690,10 @@ th:last-child{
 
 /*-------account page--------*/
 
-.accout-page{
+.account-page{
     padding: 50px 0;
-    background: radial-gradient(#fff,#ffd6d6);
-    background-image: url(images/k);
+    background: radial-gradient(#fff, whitesmoke);
+    
 }
 
 .form-container{

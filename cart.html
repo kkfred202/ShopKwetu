@@ -15,7 +15,7 @@
                   <a href="index.html"><img src="images/shopkwetulogo.png" width="125px"></a>
               </div>
               <nav>
-                <ul id="MenuItems">
+                <ul id="navmenu">
                     <li><a class="a" href="index.html">Home</a></li>
                     <li><a class="a"  href="products.html">Products</a></li>
                     <li><a class="a" href="about.html">About</a></li>
@@ -155,18 +155,18 @@
 
 <script>
     
-    var MenuItems = document.getElementById("MenuItems");
+    var navmenu = document.getElementById("navmenu");
     
-    MenuItems.style.maxHeight = "0px";
+    navmenu.style.maxHeight = "0px";
     
     function menutoggle()
     {
-        if(MenuItems.style.maxHeight == "0px")
+        if(navmenu.style.maxHeight == "0px")
             {
-                MenuItems.style.maxHeight = "200px";
+                navmenu.style.maxHeight = "200px";
             }else
             {
-                MenuItems.style.maxHeight = "0px"
+                navmenu.style.maxHeight = "0px"
             } 
     }
     
