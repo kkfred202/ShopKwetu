@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const submitBtn = document.getElementById("submit-btn");
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault(); 
 
-        // Validate form fields
+        
         const name = document.getElementById("name");
         const email = document.getElementById("email");
         const phone = document.getElementById("phone");
@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
             messageError.classList.add("hidden");
         }
 
-        // Check built-in HTML5 validation and custom validation
+       
         if (isValid && form.checkValidity()) { 
-            sendEmail(); // Trigger sendEmail function if form is valid
+            sendEmail(); 
         }
     });
 
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     console.log("Email sent successfully:", response);
                     alert("Email sent successfully");
 
-                    // Optionally reset form fields after successful submission
+                    
                     form.reset();
                 },
                 function(error) {
