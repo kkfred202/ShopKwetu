@@ -297,7 +297,7 @@ small{
     
 nav ul{
     position: absolute;
-    top: 70px;
+    top: 90px;
     left: 0;
     background: #333;
     width: 100%;
@@ -692,6 +692,7 @@ th:last-child{
 .accout-page{
     padding: 50px 0;
     background: radial-gradient(#fff,#ffd6d6);
+    background-image: url(images/k);
 }
 
 .form-container{

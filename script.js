@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    function validateform(event) {
-        event.preventDefault(); 
+    const form = document.querySelector("form");
+    const submitBtn = document.getElementById("submit-btn");
 
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Validate form fields
         const name = document.getElementById("name");
         const email = document.getElementById("email");
         const phone = document.getElementById("phone");
@@ -14,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let isValid = true;
 
+        // Custom validation
         if (name.value.trim() === "") {
             nameError.classList.remove("hidden");
             isValid = false;
@@ -42,34 +47,38 @@ document.addEventListener("DOMContentLoaded", function () {
             messageError.classList.add("hidden");
         }
 
-        if (isValid) {
-            sendEmail();
+        // Check built-in HTML5 validation and custom validation
+        if (isValid && form.checkValidity()) { 
+            sendEmail(); // Trigger sendEmail function if form is valid
         }
-        
-        return isValid;
-    }
+    });
 
     function sendEmail() {
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const phone = document.getElementById("phone").value;
-        const message = document.getElementById("message").value;
+        submitBtn.disabled = true;
 
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "shopkwetuke@gmail.com", 
-            Password: "8EF858AFB661F681F5788864CF1882E98FA9",
-            To: 'shopkwetuke@gmail.com',
-            From: "shopkwetuke@gmail.com",
-            Subject: "New Contact Form Enquiry",
-            Body: `Name: ${name} <br>Email: ${email} <br>Phone: ${phone} <br>Message: ${message}`
-        }).then(
-            message => alert("Email sent successfully: ")
-        ).catch(
-            error => alert("Failed to send email: " + error)
-        );
+        let parms = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            message: document.getElementById("message").value,
+        };
+
+        emailjs.send("service_3xd7irq", "template_oenrqhe", parms)
+            .then(
+                function(response) {
+                    console.log("Email sent successfully:", response);
+                    alert("Email sent successfully");
+
+                    // Optionally reset form fields after successful submission
+                    form.reset();
+                },
+                function(error) {
+                    console.error("Failed to send email:", error);
+                    alert("Failed to send email: " + error);
+                }
+            )
+            .finally(() => {
+                submitBtn.disabled = false;
+            });
     }
-
-    const form = document.querySelector("form");
-    form.addEventListener("submit", validateform);
 });
