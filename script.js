@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let isValid = true;
 
-        // Custom validation
+        //mycustom 
         if (name.value.trim() === "") {
             nameError.classList.remove("hidden");
             isValid = false;
