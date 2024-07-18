@@ -187,9 +187,9 @@ small{
 .testimonial .col-3{
     text-align: center;
     padding: 40px 20px 10px;
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform .5s;
+    background: white;
 }
 .testimonial .col-3 img{
     width: 50px;
